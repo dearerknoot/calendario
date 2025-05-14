@@ -1,19 +1,28 @@
 const dias = document.querySelectorAll('.calendario td');
-
+let aulas = {
+    port: 32,
+    mat: 30
+}
+let freq = {
+    fpt: (aulas.port * 100) / 32,
+}
+console.log(freq.fpt)
 dias.forEach(dia => {
   dia.addEventListener('click', () => {
     dia.style.backgroundColor = 'red';
     let valorDia = dia.dataset.dia;
     if(valorDia === 'seg'){
-        alert('segunda')
+        aulas.port = aulas.port -2;
+        console.log(aulas.port);
+        console.log(freq.fpt);
     }else if(valorDia === 'ter'){
-        alert('terça')
+        
     }else if(valorDia === 'qua'){
-        alert('quarta')
+        
     }else if(valorDia === 'qui'){
-        alert('quinta')
+        
     }else if(valorDia === 'sex'){
-        alert('sexta')
+        
     }
         
     

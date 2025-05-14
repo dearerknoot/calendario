@@ -1,6 +1,54 @@
-.calendario{
-    margin-left: 500px;
-    margin-top: 100px;
-    width: 500px;
-    height: 500px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.mes {
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendario th, .calendario td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 14.2%;
+  height: 40px;
+  text-align: center;
+}
+
+.calendario th {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.calendario td {
+  background-color: #fff;
+}
+
+.calendario td:hover {
+  background-color: #eaeaea;
 }
