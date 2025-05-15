@@ -1,12 +1,24 @@
 const dias = document.querySelectorAll('.calendario td');
 let aulas = {
-    port: 32,
-    mat: 30
+  port: 91,
+  mat: 93,
+  soc: 13,
+  qui: 39,
+  fis: 41,
+  geo: 26,
+  his: 26,
+  fil: 13,
+  tea: 13,
+  mus: 13,
+  ef: 13,
+  ing: 26,
+  bio: 26
 }
 let freq = {
-    fpt: (aulas.port * 100) / 32,
+  port: 100,
+  mat: 100,
 }
-console.log(freq.fpt)
+console.log(freq.port)
 dias.forEach(dia => {
   dia.addEventListener('click', () => {
     dia.style.backgroundColor = 'red';
@@ -14,7 +26,8 @@ dias.forEach(dia => {
     if(valorDia === 'seg'){
         aulas.port = aulas.port -2;
         console.log(aulas.port);
-        console.log(freq.fpt);
+        freq.port = (aulas.port * 100 / 32)
+        console.log(freq.port);
     }else if(valorDia === 'ter'){
         
     }else if(valorDia === 'qua'){
