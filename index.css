@@ -1,9 +1,14 @@
+*{
+  margin: 0;
+}
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   text-align: center;
 }
-
+body h1{
+  text-align: center;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -26,14 +31,17 @@ h2 {
   font-size: 18px;
   color: #333;
 }
-
 .calendario {
   width: 100%;
-  border-collapse: collapse;
+  height: 100vh;
+  border-style: solid;
 }
-
+.table{
+  width: 100%;
+  text-align: center;
+}
 .calendario th, .calendario td {
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   padding: 8px;
   width: 14.2%;
   height: 40px;
@@ -47,6 +55,8 @@ h2 {
 
 .calendario td {
   background-color: #fff;
+  border-style: solid;
+  height: auto;
 }
 
 .calendario td:hover {

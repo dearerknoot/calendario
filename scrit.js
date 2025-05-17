@@ -1,4 +1,57 @@
 const dias = document.querySelectorAll('.calendario td');
+
+const portFreq = document.getElementById('portFreq');
+const portFaltas = document.getElementById('portFaltas');
+const portRest = document.getElementById('portRest');
+
+const matFreq = document.getElementById('matFreq');
+const matFaltas = document.getElementById('matFaltas');
+const matRest = document.getElementById('matRest');
+
+const socFreq = document.getElementById('socFreq');
+const socFaltas = document.getElementById('socFaltas');
+const socRest = document.getElementById('socRest');
+
+const quiFreq = document.getElementById('quiFreq');
+const quiFaltas = document.getElementById('quiFaltas');
+const quiRest = document.getElementById('quiRest');
+
+const fisFreq = document.getElementById('fisFreq');
+const fisFaltas = document.getElementById('fisFaltas');
+const fisRest = document.getElementById('fisRest');
+
+const geoFreq = document.getElementById('geoFreq');
+const geoFaltas = document.getElementById('geoFaltas');
+const geoRest = document.getElementById('geoRest');
+
+const hisFreq = document.getElementById('hisFreq');
+const hisFaltas = document.getElementById('hisFaltas');
+const hisRest = document.getElementById('hisRest');
+
+const filFreq = document.getElementById('filFreq');
+const filFaltas = document.getElementById('filFaltas');
+const filRest = document.getElementById('filRest');
+
+const teaFreq = document.getElementById('teaFreq');
+const teaFaltas = document.getElementById('teaFaltas');
+const teaRest = document.getElementById('teaRest');
+
+const musFreq = document.getElementById('musFreq');
+const musFaltas = document.getElementById('musFaltas');
+const musRest = document.getElementById('musRest');
+
+const efFreq = document.getElementById('efFreq');
+const efFaltas = document.getElementById('efFaltas');
+const efRest = document.getElementById('efRest');
+
+const ingFreq = document.getElementById('ingFreq');
+const ingFaltas = document.getElementById('ingFaltas');
+const ingRest = document.getElementById('ingRest');
+
+const bioFreq = document.getElementById('bioFreq');
+const bioFaltas = document.getElementById('bioFaltas');
+const bioRest = document.getElementById('bioRest');
+
 let aulas = {
   port: 91,
   mat: 89,
@@ -92,9 +145,9 @@ dias.forEach(dia => {
       console.log(`aulas: ${aulas.mat}`)
     }else if(valorDia === 'sab' || valorDia === 'dom'){
       if(valorDia === 'sab'){
-        alert('nao tem aula sabado mongol :)')
+        alert('nao tem aula sabado :)')
       }else{
-        alert('nao tem aula domingo mongol :)')
+        alert('nao tem aula domingo :)')
       }
     }else if(valorDia === 'fer'){
       alert('feriado');
