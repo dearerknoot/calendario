@@ -130,6 +130,7 @@ console.log(aulas.mat)
 dias.forEach(dia => {
   dia.addEventListener('click', () => {
     dia.style.backgroundColor = 'red';
+    dia.style.pointerEvents = 'none';
     let valorDia = dia.dataset.dia;
     if (valorDia === 'seg') {
 
