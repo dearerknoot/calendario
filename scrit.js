@@ -129,206 +129,210 @@ console.log(freq.mat)
 console.log(aulas.mat)
 dias.forEach(dia => {
   dia.addEventListener('click', () => {
-    dia.style.backgroundColor = 'red';
-    dia.style.pointerEvents = 'none';
-    let valorDia = dia.dataset.dia;
-    if (valorDia === 'seg') {
+    let input = confirm('Confirmar falta?')
+    if (input) {
+      dia.style.backgroundColor = 'red';
+      dia.style.pointerEvents = 'none';
+      let valorDia = dia.dataset.dia;
+      if (valorDia === 'seg') {
 
-      faltasTotal += 10;
-      ft.textContent = faltasTotal;
-      aulas.port -= 2;
-      aulas.mat -= 2;
-      aulas.soc -= 1;
-      aulas.qui -= 2;
-      aulas.fis -= 1;
-      aulas.his -= 2;
+        faltasTotal += 10;
+        ft.textContent = faltasTotal;
+        aulas.port -= 2;
+        aulas.mat -= 2;
+        aulas.soc -= 1;
+        aulas.qui -= 2;
+        aulas.fis -= 1;
+        aulas.his -= 2;
 
-      freq.port = (aulas.port * 100 / 91);
-      freq.mat = (aulas.mat * 100 / 89);
-      freq.soc = (aulas.soc * 100 / 13);
-      freq.qui = (aulas.qui * 100 / 39);
-      freq.fis = (aulas.fis * 100 / 37);
-      freq.his = (aulas.his * 100 / 26);
-      
-      nfaltasQui += 2;
-      nfaltasPort += 2;
-      nfaltasMat += 2;
-      nfaltasSoc += 1;
-      nfaltasFis += 1;
-      nfaltasHis += 2;
-      rfaltasQui -= 2;
-      rfaltasPort -= 2;
-      rfaltasMat -= 2;
-      rfaltasSoc -= 1;
-      nfaltasFis -= 1;
-      nfaltasHis -= 1;
-      quiFreq.textContent = freq.qui.toFixed(2) + "%";
-      portFreq.textContent = freq.port.toFixed(2) + '%';
-      matFreq.textContent = freq.mat.toFixed(2) + '%';
-      socFreq.textContent = freq.soc.toFixed(2) + '%';
-      fisFreq.textContent = freq.fis.toFixed(2) + '%';
-      hisFreq.textContent = freq.his.toFixed(2) + '%';
+        freq.port = (aulas.port * 100 / 91);
+        freq.mat = (aulas.mat * 100 / 89);
+        freq.soc = (aulas.soc * 100 / 13);
+        freq.qui = (aulas.qui * 100 / 39);
+        freq.fis = (aulas.fis * 100 / 37);
+        freq.his = (aulas.his * 100 / 26);
 
-      quiFaltas.textContent = nfaltasQui;
-      portFaltas.textContent = nfaltasPort;
-      matFaltas.textContent = nfaltasMat;
-      socFaltas.textContent = nfaltasSoc;
-      fisFaltas.textContent = nfaltasFis;
-      hisFaltas.textContent = nfaltasHis;
+        nfaltasQui += 2;
+        nfaltasPort += 2;
+        nfaltasMat += 2;
+        nfaltasSoc += 1;
+        nfaltasFis += 1;
+        nfaltasHis += 2;
+        rfaltasQui -= 2;
+        rfaltasPort -= 2;
+        rfaltasMat -= 2;
+        rfaltasSoc -= 1;
+        nfaltasFis -= 1;
+        nfaltasHis -= 1;
+        quiFreq.textContent = freq.qui.toFixed(2) + "%";
+        portFreq.textContent = freq.port.toFixed(2) + '%';
+        matFreq.textContent = freq.mat.toFixed(2) + '%';
+        socFreq.textContent = freq.soc.toFixed(2) + '%';
+        fisFreq.textContent = freq.fis.toFixed(2) + '%';
+        hisFreq.textContent = freq.his.toFixed(2) + '%';
 
-      quiRest.textContent = rfaltasQui;
-      portRest.textContent = rfaltasPort;
-      matRest.textContent = rfaltasMat;
-      socRest.textContent = rfaltasSoc;
-      fisRest.textContent = rfaltasFis;
-      hisRest.textContent = rfaltasHis;
-    } else if (valorDia === 'ter') {
-      faltasTotal += 10;
-      ft.textContent = faltasTotal;
-      aulas.ef -= 1;
-      aulas.mus -= 1;
-      aulas.port -= 3;
-      aulas.geo -= 2;
-      aulas.tea -= 1;
-      aulas.mat -= 2;
+        quiFaltas.textContent = nfaltasQui;
+        portFaltas.textContent = nfaltasPort;
+        matFaltas.textContent = nfaltasMat;
+        socFaltas.textContent = nfaltasSoc;
+        fisFaltas.textContent = nfaltasFis;
+        hisFaltas.textContent = nfaltasHis;
 
-      nfaltasEf += 1;
-      nfaltasMus += 1;
-      nfaltasPort += 3;
-      nfaltasGeo += 2;
-      nfaltasMat += 2;
-      nfaltasTea += 1;
-      rfaltasEf -= 1;
-      rfaltasMus -= 1;
-      rfaltasPort -= 3;
-      rfaltasGeo -= 2;
-      rfaltasTea -=1;
-      rfaltasMat -=2;
+        quiRest.textContent = rfaltasQui;
+        portRest.textContent = rfaltasPort;
+        matRest.textContent = rfaltasMat;
+        socRest.textContent = rfaltasSoc;
+        fisRest.textContent = rfaltasFis;
+        hisRest.textContent = rfaltasHis;
+      } else if (valorDia === 'ter') {
+        faltasTotal += 10;
+        ft.textContent = faltasTotal;
+        aulas.ef -= 1;
+        aulas.mus -= 1;
+        aulas.port -= 3;
+        aulas.geo -= 2;
+        aulas.tea -= 1;
+        aulas.mat -= 2;
 
-      freq.ef = (aulas.ef * 100 /13);
-      freq.mus = (aulas.mus * 100 /13);
-      freq.port = (aulas.port * 100/91);
-      freq.geo = (aulas.geo * 100/26);
-      freq.tea = (aulas.tea *100/13);
-      freq.mat = (aulas.mat *100/89);
+        nfaltasEf += 1;
+        nfaltasMus += 1;
+        nfaltasPort += 3;
+        nfaltasGeo += 2;
+        nfaltasMat += 2;
+        nfaltasTea += 1;
+        rfaltasEf -= 1;
+        rfaltasMus -= 1;
+        rfaltasPort -= 3;
+        rfaltasGeo -= 2;
+        rfaltasTea -= 1;
+        rfaltasMat -= 2;
 
-      efFreq.textContent = freq.ef.toFixed(2) + '%';
-      musFreq.textContent = freq.mus.toFixed(2) + '%';
-      portFreq.textContent = freq.port.toFixed(2) + '%';
-      geoFreq.textContent = freq.geo.toFixed(2) + '%';
-      matFreq.textContent = freq.mat.toFixed(2) + '%';
-      teaFreq.textContent = freq.tea.toFixed(2) + '%';
+        freq.ef = (aulas.ef * 100 / 13);
+        freq.mus = (aulas.mus * 100 / 13);
+        freq.port = (aulas.port * 100 / 91);
+        freq.geo = (aulas.geo * 100 / 26);
+        freq.tea = (aulas.tea * 100 / 13);
+        freq.mat = (aulas.mat * 100 / 89);
 
-      efFaltas.textContent = nfaltasEf;
-      musFaltas.textContent = nfaltasMus;
-      portFaltas.textContent = nfaltasPort;
-      geoFaltas.textContent = nfaltasGeo;
-      teaFaltas.textContent = nfaltasTea;
-      matFaltas.textContent = nfaltasMat;
+        efFreq.textContent = freq.ef.toFixed(2) + '%';
+        musFreq.textContent = freq.mus.toFixed(2) + '%';
+        portFreq.textContent = freq.port.toFixed(2) + '%';
+        geoFreq.textContent = freq.geo.toFixed(2) + '%';
+        matFreq.textContent = freq.mat.toFixed(2) + '%';
+        teaFreq.textContent = freq.tea.toFixed(2) + '%';
 
-      efRest.textContent = rfaltasEf;
-      musRest.textContent = rfaltasMus;
-      portRest.textContent = rfaltasPort;
-      geoRest.textContent = rfaltasGeo;
-      teaRest.textContent =  rfaltasTea;
-      matRest.textContent = rfaltasMat;
-    } else if (valorDia === 'qua') {
-      faltasTotal += 4;
-      ft.textContent = faltasTotal;
-      aulas.ing -= 2;
-      aulas.port -= 1;
-      aulas.qui -= 1;
-      freq.ing = (aulas.ing *100/26);
-      freq.port = (aulas.port *100/91);
-      freq.qui = (aulas.qui *100/39);
+        efFaltas.textContent = nfaltasEf;
+        musFaltas.textContent = nfaltasMus;
+        portFaltas.textContent = nfaltasPort;
+        geoFaltas.textContent = nfaltasGeo;
+        teaFaltas.textContent = nfaltasTea;
+        matFaltas.textContent = nfaltasMat;
 
-      nfaltasIng += 2;
-      nfaltasPort += 1;
-      nfaltasQui += 1;
+        efRest.textContent = rfaltasEf;
+        musRest.textContent = rfaltasMus;
+        portRest.textContent = rfaltasPort;
+        geoRest.textContent = rfaltasGeo;
+        teaRest.textContent = rfaltasTea;
+        matRest.textContent = rfaltasMat;
+      } else if (valorDia === 'qua') {
+        faltasTotal += 4;
+        ft.textContent = faltasTotal;
+        aulas.ing -= 2;
+        aulas.port -= 1;
+        aulas.qui -= 1;
+        freq.ing = (aulas.ing * 100 / 26);
+        freq.port = (aulas.port * 100 / 91);
+        freq.qui = (aulas.qui * 100 / 39);
 
-      rfaltasIng -= 2;
-      rfaltasPort -=1;
-      rfaltasQui -=1;
+        nfaltasIng += 2;
+        nfaltasPort += 1;
+        nfaltasQui += 1;
 
-      ingFreq.textContent = freq.ing.toFixed(2) + '%';
-      portFreq.textContent = freq.port.toFixed(2) + '%';
-      quiFreq.textContent = freq.qui.toFixed(2) + '%';
+        rfaltasIng -= 2;
+        rfaltasPort -= 1;
+        rfaltasQui -= 1;
 
-      ingFaltas.textContent = nfaltasIng;
-      portFaltas.textContent = nfaltasPort;
-      quiFaltas.textContent = nfaltasQui;
+        ingFreq.textContent = freq.ing.toFixed(2) + '%';
+        portFreq.textContent = freq.port.toFixed(2) + '%';
+        quiFreq.textContent = freq.qui.toFixed(2) + '%';
 
-      ingRest.textContent = rfaltasIng;
-      portRest.textContent = rfaltasPort;
-      quiRest.textContent = rfaltasQui;
-    } else if (valorDia === 'qui') {
-      faltasTotal += 4;
-      ft.textContent = faltasTotal;
-      aulas.mat -= 2;
-      aulas.fis -= 2;
+        ingFaltas.textContent = nfaltasIng;
+        portFaltas.textContent = nfaltasPort;
+        quiFaltas.textContent = nfaltasQui;
 
-      nfaltasMat += 2;
-      nfaltasFis += 2;
-      rfaltasMat -=2;
-      rfaltasFis -=2;
-      freq.mat = (aulas.mat *100/89);
-      freq.fis = (aulas.fis *100/37);
-      
-      matFreq.textContent = freq.mat.toFixed(2) + '%';
-      fisFreq.textContent = freq.fis.toFixed(2) + '%';
+        ingRest.textContent = rfaltasIng;
+        portRest.textContent = rfaltasPort;
+        quiRest.textContent = rfaltasQui;
+      } else if (valorDia === 'qui') {
+        faltasTotal += 4;
+        ft.textContent = faltasTotal;
+        aulas.mat -= 2;
+        aulas.fis -= 2;
 
-      matFaltas.textContent = nfaltasMat;
-      fisFaltas.textContent = nfaltasFis;
+        nfaltasMat += 2;
+        nfaltasFis += 2;
+        rfaltasMat -= 2;
+        rfaltasFis -= 2;
+        freq.mat = (aulas.mat * 100 / 89);
+        freq.fis = (aulas.fis * 100 / 37);
 
-      matRest.textContent = rfaltasMat;
-      fisRest.textContent = rfaltasFis;
+        matFreq.textContent = freq.mat.toFixed(2) + '%';
+        fisFreq.textContent = freq.fis.toFixed(2) + '%';
 
-    } else if (valorDia === 'sex') {
-      faltasTotal += 5;
-      ft.textContent = faltasTotal;
-      aulas.mat -= 1;
-      aulas.bio -= 2;
-      aulas.port -= 1;
-      aulas.fil -= 1;
+        matFaltas.textContent = nfaltasMat;
+        fisFaltas.textContent = nfaltasFis;
 
-      nfaltasMat += 1;
-      nfaltasBio += 2;
-      nfaltasPort += 1;
-      nfaltasFil += 1;
-      rfaltasMat -=1;
-      rfaltasBio -=2;
-      rfaltasPort -=1;
-      rfaltasFil -=1;
-      freq.mat = (aulas.mat *100/89);
-      freq.bio = (aulas.bio *100/26);
-      freq.port = (aulas.port *100/91);
-      freq.fil = (aulas.fil *100/13);
-      
-      matFreq.textContent = freq.mat.toFixed(2) + '%';
-      bioFreq.textContent = freq.bio.toFixed(2) + '%';
-      portFreq.textContent = freq.port.toFixed(2) + '%';
-      filFreq.textContent = freq.fil.toFixed(2) + '%';
+        matRest.textContent = rfaltasMat;
+        fisRest.textContent = rfaltasFis;
 
-      matFaltas.textContent = nfaltasMat;
-      bioFaltas.textContent = nfaltasBio;
-      portFaltas.textContent = nfaltasPort;
-      filFaltas.textContent = nfaltasFil;
-      matRest.textContent = rfaltasMat;
-      bioRest.textContent = rfaltasBio;
-      portRest.textContent = rfaltasPort;
-      filRest.textContent = rfaltasFil;
+      } else if (valorDia === 'sex') {
+        faltasTotal += 5;
+        ft.textContent = faltasTotal;
+        aulas.mat -= 1;
+        aulas.bio -= 2;
+        aulas.port -= 1;
+        aulas.fil -= 1;
 
-    }else if(valorDia === 'sab' || valorDia === 'dom'){
-      if(valorDia === 'sab'){
-        alert('nao tem aula sabado :)')
-      }else{
-        alert('nao tem aula domingo :)')
+        nfaltasMat += 1;
+        nfaltasBio += 2;
+        nfaltasPort += 1;
+        nfaltasFil += 1;
+        rfaltasMat -= 1;
+        rfaltasBio -= 2;
+        rfaltasPort -= 1;
+        rfaltasFil -= 1;
+        freq.mat = (aulas.mat * 100 / 89);
+        freq.bio = (aulas.bio * 100 / 26);
+        freq.port = (aulas.port * 100 / 91);
+        freq.fil = (aulas.fil * 100 / 13);
+
+        matFreq.textContent = freq.mat.toFixed(2) + '%';
+        bioFreq.textContent = freq.bio.toFixed(2) + '%';
+        portFreq.textContent = freq.port.toFixed(2) + '%';
+        filFreq.textContent = freq.fil.toFixed(2) + '%';
+
+        matFaltas.textContent = nfaltasMat;
+        bioFaltas.textContent = nfaltasBio;
+        portFaltas.textContent = nfaltasPort;
+        filFaltas.textContent = nfaltasFil;
+        matRest.textContent = rfaltasMat;
+        bioRest.textContent = rfaltasBio;
+        portRest.textContent = rfaltasPort;
+        filRest.textContent = rfaltasFil;
+
+      } else if (valorDia === 'sab' || valorDia === 'dom') {
+        if (valorDia === 'sab') {
+          alert('nao tem aula sabado :)')
+        } else {
+          alert('nao tem aula domingo :)')
+        }
+      } else if (valorDia === 'fer') {
+        alert('feriado');
       }
-    }else if(valorDia === 'fer'){
-      alert('feriado');
     }
+  })
 
-  });
+
 
   //   const diaSemana = td.dataset.dia;
   //   if(diaSemana === 'seg'){
